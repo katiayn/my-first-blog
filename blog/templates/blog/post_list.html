@@ -37,6 +37,14 @@
 
 			Cras imperdiet lacus eu mauris faucibus laoreet. Fusce posuere lacinia urna, non convallis enim commodo sit amet. Pellentesque malesuada diam nunc, quis consequat ante egestas eu. Nunc elit libero, scelerisque at feugiat in, euismod quis orci. Vivamus quis interdum dolor, sit amet ultricies neque. Donec ac sodales dolor, a molestie purus. Nulla tempus suscipit quam ac semper. Phasellus eu dignissim mi. Vivamus pretium ultricies sodales. Duis eget lectus semper, lacinia sapien vitae, blandit nisl. Mauris erat arcu, efficitur quis turpis vel, convallis fringilla est.
 		</div>
+
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}}</p>
+				<h2><a href="">{{ post.title }}}</a></h2>
+				<p>{{ post.text|linebreaks }}</p>
+			</div>
+		{% endfor %}
 		
 	</body>
 </html>
