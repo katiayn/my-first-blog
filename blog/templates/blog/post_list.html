@@ -1,50 +1,14 @@
-<html>
-	<head>
-		<title>Django Girls Blog</title>
-	</head>
-	<body>
-		<div>
-			<h1>Django Girls</h1>
-			<em>Site: </em> 
-			<a href="http://djangogirls.org">Django Girls </a>
-		</div>
-		<div>
-			<ul>
-				<li>primeiro item</li>
-				<li>segundo item</li>
-			</ul>
-		</div>
+{% extends "blog/base.html" %}
 
-		<div>
-			<p>published: 14.06.2014, 12:14</p>
-			<h2><a href="">My first post</a></h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porttitor eros risus. Sed vestibulum viverra turpis vitae viverra. Duis sapien sem, porttitor non nunc id, imperdiet varius est. Sed bibendum in magna in malesuada. Mauris tristique, leo in semper aliquam, nulla lectus cursus turpis, ut aliquam velit justo porta leo. Nullam auctor ipsum eu nibh porttitor placerat. Proin feugiat pulvinar nisl id ultrices. Phasellus consequat imperdiet eros, a commodo arcu ornare vel. In dictum tincidunt justo, sed tempus justo cursus a.
-
-			Proin quis nisl ornare, semper eros nec, tincidunt nibh. Duis quis dictum nibh, vitae auctor purus. Suspendisse ornare dolor a tristique aliquet. Praesent ac mauris luctus, sagittis magna semper, venenatis erat. Quisque orci quam, faucibus quis euismod vitae, bibendum in sapien. Duis nec ultrices lacus, non sagittis massa. Sed dictum vehicula dui sed accumsan. Integer vehicula auctor ligula, vitae scelerisque magna vestibulum vitae.
-
-			Phasellus sed consequat mauris. Nullam faucibus magna et est auctor ultrices. Fusce placerat nibh at ex auctor congue. Maecenas euismod sit amet urna sed pharetra. Pellentesque pulvinar ante pretium dui hendrerit, vitae semper nisi interdum. Aenean sed est pulvinar, lacinia magna eu, semper lectus. Sed interdum dui quam, sed suscipit magna volutpat eu. In mi metus, commodo at fringilla ac, convallis maximus sem. In hac habitasse platea dictumst. Nam placerat porttitor velit non tristique. Vestibulum nec fermentum sapien. Mauris maximus justo ut ex finibus aliquam. Phasellus nec libero turpis. Quisque id ipsum a lacus convallis consectetur ac cursus eros. Phasellus molestie, mauris et dapibus aliquam, purus lectus vestibulum nisl, luctus eleifend lacus dui eu felis.
-
-			Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque condimentum efficitur tempor. Vestibulum ut eros id nulla malesuada tempor id sit amet enim. Donec eu diam efficitur, tempus odio nec, molestie diam. Morbi vehicula, tellus a hendrerit laoreet, ipsum dui aliquet sem, eu imperdiet libero arcu a lacus. Nullam sit amet auctor urna. Phasellus sagittis et ipsum facilisis euismod. Suspendisse hendrerit metus eu turpis efficitur, eu ultrices libero venenatis. Sed sodales, mauris a condimentum hendrerit, mi est auctor tortor, id fringilla elit lacus sed mi.
-
-			Aliquam vitae vulputate velit, at gravida neque. Fusce venenatis, eros hendrerit molestie luctus, quam orci vestibulum erat, non rhoncus magna mauris fringilla erat. Suspendisse justo magna, condimentum vel diam a, euismod venenatis odio. Fusce pharetra hendrerit odio. Aliquam commodo malesuada diam. In pulvinar pellentesque faucibus. Vestibulum convallis viverra augue, dictum auctor purus vulputate ut. Nam sed gravida eros. Vivamus in consectetur est. Praesent nulla sapien, auctor vel lectus vel, tempus dictum sapien. 
-		</div>
-		<div>
-			<p>published: 14.06.2014, 12:14</p>
-			<h2><a href="">My second post</a></h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac metus eu lacus lobortis posuere sed non eros. Etiam viverra faucibus diam non pharetra. In tincidunt eros eros, vitae pellentesque ligula blandit in. Suspendisse non mollis purus. Proin in cursus augue. Praesent dui magna, ultrices ac gravida sit amet, laoreet in turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus nec nibh in quam laoreet egestas et placerat elit. Morbi purus sapien, laoreet sit amet lectus vel, placerat consectetur metus. Nulla posuere velit sed nulla fermentum luctus. Donec nec libero lobortis nulla rhoncus iaculis. Suspendisse nec lacinia massa, maximus placerat quam. Aenean sem nulla, vehicula id neque quis, interdum hendrerit ipsum. Maecenas tempor accumsan nisi sed maximus. Donec pellentesque scelerisque accumsan. Donec massa libero, vehicula sit amet blandit vel, lobortis vitae enim.
-
-			Nulla facilisi. Duis et facilisis metus. Cras mollis elit at odio egestas, sed ultricies ligula condimentum. Donec urna elit, hendrerit in finibus eget, congue quis libero. Donec finibus rutrum egestas. Nam sit amet elementum risus. Fusce et dolor in tortor dictum pharetra non et turpis. Quisque eget justo ornare, pulvinar odio a, feugiat metus. Sed lobortis imperdiet pulvinar. Mauris commodo ex eget justo placerat, et congue sem finibus.
-
-			Cras imperdiet lacus eu mauris faucibus laoreet. Fusce posuere lacinia urna, non convallis enim commodo sit amet. Pellentesque malesuada diam nunc, quis consequat ante egestas eu. Nunc elit libero, scelerisque at feugiat in, euismod quis orci. Vivamus quis interdum dolor, sit amet ultricies neque. Donec ac sodales dolor, a molestie purus. Nulla tempus suscipit quam ac semper. Phasellus eu dignissim mi. Vivamus pretium ultricies sodales. Duis eget lectus semper, lacinia sapien vitae, blandit nisl. Mauris erat arcu, efficitur quis turpis vel, convallis fringilla est.
-		</div>
-
-		{% for post in posts %}
-			<div>
-				<p>published: {{ post.published_date }}}</p>
-				<h2><a href="">{{ post.title }}</a></h2>
-				<p>{{ post.text|linebreaks }}</p>
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<div class="date">
+				{{ post.published_date }}
 			</div>
-		{% endfor %}
-		
-	</body>
-</html>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+	{% endfor %}
+{% endblock content %}
+	
